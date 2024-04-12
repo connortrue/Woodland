@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 38fc4261ee10c1a44a774fd1c053207c
+guid: f0a1b1d88892f194fa47deb85628ed12
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,54 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle-Sheet_0
+      name: Run-Sheet_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 16
-        width: 35
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c6bf6180274a3641a385a221ed6e944
-      internalID: -845595287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 16
-        width: 35
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd739a94827b84748ba2df49632ece73
-      internalID: 857834135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 149
-        y: 16
-        width: 35
+        x: 28
+        y: 13
+        width: 32
         height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 492c4fcee55749b429fed946b833e821
-      internalID: 1550038539
+      spriteID: a8d96aa6cebccda4686b3a4b3195761e
+      internalID: -500658365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle-Sheet_3
+      name: Run-Sheet_1
       rect:
         serializedVersion: 2
-        x: 213
-        y: 16
-        width: 35
-        height: 48
+        x: 106
+        y: 14
+        width: 34
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +145,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f80aafb9b5f866d439be34abd25072dd
-      internalID: 1403981186
+      spriteID: 77dd1406262f12740a8be218adeed61b
+      internalID: -1335136981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 12
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7175bd7872c52a7408af9ba4466b9fe0
+      internalID: -1579835256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 13
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52b1a09660f05044bb3883363826b9c
+      internalID: 1172220779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 14
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4647cf168a788e84a8516b6cd4946b97
+      internalID: -139028989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 15
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9606ae6ab5e156e49b31e9fc5e454b04
+      internalID: 253372454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 12
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7df92a18530644ab86a4445fe548c7
+      internalID: -2000426325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 13
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0192caaab5bb65641b7df5a2e994a5af
+      internalID: -1098689608
       vertices: []
       indices: 
       edges: []
@@ -204,10 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle-Sheet_0: -845595287
-      Idle-Sheet_1: 857834135
-      Idle-Sheet_2: 1550038539
-      Idle-Sheet_3: 1403981186
+      Run-Sheet_0: -500658365
+      Run-Sheet_1: -1335136981
+      Run-Sheet_2: -1579835256
+      Run-Sheet_3: 1172220779
+      Run-Sheet_4: -139028989
+      Run-Sheet_5: 253372454
+      Run-Sheet_6: -2000426325
+      Run-Sheet_7: -1098689608
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
