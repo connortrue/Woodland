@@ -10,7 +10,13 @@ public class PlayerMovement : MonoBehaviour
     private float inputAxis;
 
     public float moveSpeed = 8f;
+    public float maxJumpHeight = 5f;
+    public float maxJumpTime = 1f;
+    public float jumpForce => (2f * maxJumpHeight) / (maxJumpTime / 2f);
+    public float gravity => (2f * maxJumpHeight) / Mathf.Pow((maxJumpTime / 2f), 2);
 
+    public bool grounded { get; private set; }
+    public bool jumping { get; private set; }
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -20,12 +26,53 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         HorizontalMovement();
+     
+        grounded = rigidbody.Raycast(Vector2.down);
+
+        if (grounded) {
+            GroundedMovement();
+        }
+        
+        ApplyGravity();
+        Debug.Log("Grounded: " + grounded);
+
     }
 
     private void HorizontalMovement()
     {
         inputAxis = Input.GetAxis("Horizontal");
-        velocity.x = Mathf.MoveTowards(velocity.x , inputAxis * moveSpeed, moveSpeed * Time.deltaTime);
+        if (Mathf.Abs(inputAxis) > 0.1f)
+        {
+            // Move in the input direction
+            velocity.x = inputAxis * moveSpeed;
+        }
+        else
+        {
+            // If no input is received, stop moving horizontally
+            velocity.x = 0f;
+        }
+    }
+    
+    private void GroundedMovement()
+    {
+        velocity.y = Mathf.Max(velocity.y, 0f);
+        jumping = velocity.y > 0f;
+
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            velocity.y = jumpForce;
+            jumping = true;
+        }
+    }
+
+    private void ApplyGravity()
+    {
+        if (!grounded)
+        {
+        // Apply gravity to the velocity's y-component
+            velocity.y -= gravity * Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()
