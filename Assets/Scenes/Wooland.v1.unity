@@ -2063,6 +2063,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8341496574315915740, guid: 30c2adddd4ddf8b4b8b1e0d6e1083763, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 848bcbe9e1db63f4e9bdfdf92435debf, type: 2}
+    - target: {fileID: 8341496574315915740, guid: 30c2adddd4ddf8b4b8b1e0d6e1083763, type: 3}
       propertyPath: m_Simulated
       value: 1
       objectReference: {fileID: 0}
