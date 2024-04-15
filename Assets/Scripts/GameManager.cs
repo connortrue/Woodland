@@ -6,18 +6,26 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public string stage { get; private set; }
     public int lives { get; private set; }
+    public int coinsCollected { get; private set; }
+    public int totalCoinsInLevel = 3;
+
     private void Awake()
     {
-        if (Instance != null) {
+        if (Instance != null)
+        {
             DestroyImmediate(gameObject);
-        }   else {
+        }
+        else
+        {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
     }
+
     private void OnDestroy()
     {
-        if (Instance == this) {
+        if (Instance == this)
+        {
             Instance = null;
         }
     }
@@ -30,14 +38,13 @@ public class GameManager : MonoBehaviour
     private void NewGame()
     {
         lives = 3;
-
+        coinsCollected = 0;
         LoadLevel("Woodland-1");
     }
 
     private void LoadLevel(string stage)
     {
         this.stage = stage;
-
         SceneManager.LoadScene("Woodland-1");
     }
 
@@ -55,9 +62,12 @@ public class GameManager : MonoBehaviour
     {
         lives--;
 
-        if (lives > 0) {
+        if (lives > 0)
+        {
             LoadLevel(stage);
-        } else {
+        }
+        else
+        {
             GameOver();
         }
     }
@@ -68,4 +78,12 @@ public class GameManager : MonoBehaviour
         // SceneManager.LoadScene("GameOver")
     }
 
+    public void CollectCoin()
+    {
+        coinsCollected++;
+        if (coinsCollected >= totalCoinsInLevel)
+        {
+            // Debug.Log("All coins collected!");
+        }
+    }
 }

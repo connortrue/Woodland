@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
         ApplyGravity();
-        Debug.Log("Grounded: " + grounded);
+        // Debug.Log("Grounded: " + grounded);
 
     }
 
