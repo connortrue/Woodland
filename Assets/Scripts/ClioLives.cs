@@ -48,17 +48,6 @@ public class ClioLives : MonoBehaviour
         }
     }
 
-    public void RemoveAllLives()
-{
-    if (!isInvincible)
-    {
-        lives = 0;
-        isInvincible = true;
-
-        GameManager.Instance.ResetLevel();
-    }
-}
-
     private void UpdateHeartDisplay()
     {
         foreach (Image img in hearts)
