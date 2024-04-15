@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
 
     public bool grounded { get; private set; }
     public bool jumping { get; private set; }
+    public bool running => Mathf.Abs(velocity.x) > 0.25f || Mathf.Abs(inputAxis) > 0.25f;
+    public bool attacking { get; private set; }
+    public bool killed { get; private set; }
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
