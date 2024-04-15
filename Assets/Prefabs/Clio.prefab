@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 917437246780128783}
   - component: {fileID: 8770668199384691099}
   m_Layer: 3
-  m_Name: Idle
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   - {fileID: 253372454, guid: f0a1b1d88892f194fa47deb85628ed12, type: 3}
   - {fileID: -2000426325, guid: f0a1b1d88892f194fa47deb85628ed12, type: 3}
   - {fileID: -1098689608, guid: f0a1b1d88892f194fa47deb85628ed12, type: 3}
-  framerate: 0.1
+  framerate: 0.075
 --- !u!114 &8770668199384691099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   - {fileID: -259922538, guid: f667e3cb4cd0744459a55997bbf04ab4, type: 3}
   - {fileID: -1874016301, guid: f667e3cb4cd0744459a55997bbf04ab4, type: 3}
   - {fileID: 1850214745, guid: f667e3cb4cd0744459a55997bbf04ab4, type: 3}
-  framerate: 0.16666667
+  framerate: 0.075
 --- !u!1 &1917107760749604771
 GameObject:
   m_ObjectHideFlags: 0
