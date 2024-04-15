@@ -28,18 +28,31 @@ public class PlayerSpriteRenderer : MonoBehaviour
 
     private void LateUpdate()
     {
-        jump.enabled = movement.jumping;
-        run.enabled = movement.running;
-
-        if (movement.jumping) {
+        if (movement.killed)
+        {
+            spriteRenderer.sprite = dead;
+        }
+        else if (movement.attacking)
+        {
+            spriteRenderer.sprite = attack;
+        }
+        else if (movement.jumping)
+        {
+            jump.enabled = true;
+            run.enabled = false;
             spriteRenderer.sprite = jump.GetCurrentSprite();
         }
-            else if (movement.killed) {
-            spriteRenderer.sprite = dead;
-        }   else if (movement.attacking) {
-            spriteRenderer.sprite = attack;
-        }   else if (!movement.running) {
+        else if (!movement.running)
+        {
+            jump.enabled = false;
+            run.enabled = false;
             spriteRenderer.sprite = idle;
+        }
+        else
+        {
+            jump.enabled = false;
+            run.enabled = true;
+            spriteRenderer.sprite = run.GetCurrentSprite();
         }
     }
 }

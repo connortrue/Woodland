@@ -2043,7 +2043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8770668199384691099, guid: 30c2adddd4ddf8b4b8b1e0d6e1083763, type: 3}
       propertyPath: framerate
-      value: 0.05
+      value: 0.075
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30c2adddd4ddf8b4b8b1e0d6e1083763, type: 3}
