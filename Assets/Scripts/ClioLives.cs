@@ -10,7 +10,7 @@ public class ClioLives : MonoBehaviour
     public Sprite emptyHeart;
 
     private bool isInvincible = false;
-    private float invincibilityDuration = 3f;
+    private float invincibilityDuration = 1f;
     private float invincibilityTimer = 0f;
     private float flashInterval = 0.2f;
 
@@ -48,6 +48,17 @@ public class ClioLives : MonoBehaviour
         }
     }
 
+    public void RemoveAllLives()
+{
+    if (!isInvincible)
+    {
+        lives = 0;
+        isInvincible = true;
+
+        GameManager.Instance.ResetLevel();
+    }
+}
+
     private void UpdateHeartDisplay()
     {
         foreach (Image img in hearts)
@@ -66,7 +77,7 @@ public class ClioLives : MonoBehaviour
         if (spriteRenderer != null)
         {
             float flashTimer = Time.time % flashInterval;
-            if (flashTimer < flashInterval / 2f)
+            if (flashTimer < flashInterval / 0.5f)
             {
                 spriteRenderer.enabled = true;
             }
