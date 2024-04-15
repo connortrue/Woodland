@@ -5,13 +5,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public string stage { get; private set; }
-    public int lives { get; private set; }
     public int coinsCollected { get; private set; }
     public int totalCoinsInLevel = 3;
-
-    public GameObject heart1;
-    public GameObject heart2;
-    public GameObject heart3;
 
     private void Awake()
     {
@@ -41,10 +36,8 @@ public class GameManager : MonoBehaviour
 
     private void NewGame()
     {
-        lives = 3;
         coinsCollected = 0;
         LoadLevel("Woodland-1");
-        // UpdateHeartDisplay();
     }
 
     private void LoadLevel(string stage)
@@ -65,22 +58,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel()
     {
-        lives--;
-        if (lives <= 0)
-        {
-            lives = 0;
-            GameOver();
-        }
-        else
-        {
-            LoadLevel(stage);
-        }
-        // UpdateHeartDisplay();
-    }
-
-    private void GameOver()
-    {
-        NewGame();
+        LoadLevel(stage);
     }
 
     public void CollectCoin()
@@ -91,16 +69,4 @@ public class GameManager : MonoBehaviour
              Debug.Log("All coins collected!");
         }
     }
-
-    public void LoseLife()
-    {
-        lives--;
-        if (lives <= 0)
-        {
-            lives = 0;
-            GameOver();
-        }
-        // UpdateHeartDisplay();
-    }
-    
 }
