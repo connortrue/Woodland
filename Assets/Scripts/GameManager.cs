@@ -60,15 +60,16 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel()
     {
-        lives--;
-
-        if (lives > 0)
+        lives--; // Deduct one life
+        Debug.Log("Lives remaining: " + lives);
+        if (lives <= 0)
         {
-            LoadLevel(stage);
+            // Game over logic
+            Debug.Log("Game Over!");
         }
         else
         {
-            GameOver();
+            LoadLevel(stage);
         }
     }
 

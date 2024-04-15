@@ -20,10 +20,30 @@ public class PlayerMovement : MonoBehaviour
     public bool running => Mathf.Abs(velocity.x) > 0.25f || Mathf.Abs(inputAxis) > 0.25f;
     public bool attacking { get; private set; }
     public bool killed { get; private set; }
+    private int lives = 3;
+
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         camera = Camera.main;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("BoarBottom")) // Check collision with Boar's bottom hit box
+        {
+            lives--; // Deduct one life
+            Debug.Log("Lives remaining: " + lives);
+            if (lives <= 0)
+            {
+                GameManager.Instance.ResetLevel(); // Reset the level if lives are zero or less
+                Debug.Log("Game Over!");
+            }
+        }
+        else if (collision.gameObject.CompareTag("BoarTop")) // Check collision with Boar's top hit box
+        {
+            Destroy(collision.gameObject.transform.parent.gameObject); // Destroy the Boar GameObject
+        }
     }
 
     private void Update()
@@ -37,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
         ApplyGravity();
-        Debug.Log("Grounded: " + grounded);
+        // Debug.Log("Grounded: " + grounded);
 
     }
 

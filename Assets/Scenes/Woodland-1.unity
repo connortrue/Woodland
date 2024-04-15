@@ -1942,7 +1942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7161050528316596819, guid: 30c2adddd4ddf8b4b8b1e0d6e1083763, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -46.6
+      value: -58.9
       objectReference: {fileID: 0}
     - target: {fileID: 7161050528316596819, guid: 30c2adddd4ddf8b4b8b1e0d6e1083763, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2613,31 +2613,6 @@ Transform:
   m_Father: {fileID: 1582515839}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1150112445 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2593309852569420789, guid: d2e0f3501c49613419f99a43ffa23f70, type: 3}
-  m_PrefabInstance: {fileID: 2593309853701542216}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1150112448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150112445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f4c8e7d65626a94aaaf9b5b08e3792c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: -643629905983424582, guid: 0712aa02db77a8a47adc11bc75140c38, type: 3}
-  - {fileID: 8743159490763363395, guid: 0712aa02db77a8a47adc11bc75140c38, type: 3}
-  - {fileID: 1492663888040095726, guid: 0712aa02db77a8a47adc11bc75140c38, type: 3}
-  - {fileID: -8425324663538271575, guid: 0712aa02db77a8a47adc11bc75140c38, type: 3}
-  - {fileID: 8875839883658667091, guid: 0712aa02db77a8a47adc11bc75140c38, type: 3}
-  - {fileID: 4580630495275900914, guid: 0712aa02db77a8a47adc11bc75140c38, type: 3}
-  framerate: 0.1
 --- !u!1001 &1155714139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5750,29 +5725,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boar
       objectReference: {fileID: 0}
-    - target: {fileID: 2593309852228989338, guid: d2e0f3501c49613419f99a43ffa23f70, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 848bcbe9e1db63f4e9bdfdf92435debf, type: 2}
-    - target: {fileID: 2593309852228989339, guid: d2e0f3501c49613419f99a43ffa23f70, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 848bcbe9e1db63f4e9bdfdf92435debf, type: 2}
-    - target: {fileID: 2593309852228989339, guid: d2e0f3501c49613419f99a43ffa23f70, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593309852228989340, guid: d2e0f3501c49613419f99a43ffa23f70, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2593309852228989341, guid: d2e0f3501c49613419f99a43ffa23f70, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2593309852228989341, guid: d2e0f3501c49613419f99a43ffa23f70, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.7
+      value: -39.4
       objectReference: {fileID: 0}
     - target: {fileID: 2593309852228989341, guid: d2e0f3501c49613419f99a43ffa23f70, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5809,26 +5768,6 @@ PrefabInstance:
     - target: {fileID: 2593309852228989341, guid: d2e0f3501c49613419f99a43ffa23f70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593309852228989342, guid: d2e0f3501c49613419f99a43ffa23f70, type: 3}
-      propertyPath: moveSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593309852228989342, guid: d2e0f3501c49613419f99a43ffa23f70, type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593309852569420791, guid: d2e0f3501c49613419f99a43ffa23f70, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593309852569420791, guid: d2e0f3501c49613419f99a43ffa23f70, type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593309852569420791, guid: d2e0f3501c49613419f99a43ffa23f70, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2e0f3501c49613419f99a43ffa23f70, type: 3}
