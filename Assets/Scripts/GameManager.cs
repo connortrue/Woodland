@@ -9,9 +9,13 @@ public class GameManager : MonoBehaviour
     public int coinsCollected { get; private set; }
     public int totalCoinsInLevel = 3;
 
+    public GameObject heart1;
+    public GameObject heart2;
+    public GameObject heart3;
+
     private void Awake()
     {
-        if (Instance != null)
+        if (Instance != null && Instance != this)
         {
             DestroyImmediate(gameObject);
         }
@@ -40,6 +44,7 @@ public class GameManager : MonoBehaviour
         lives = 3;
         coinsCollected = 0;
         LoadLevel("Woodland-1");
+        // UpdateHeartDisplay();
     }
 
     private void LoadLevel(string stage)
@@ -60,23 +65,22 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel()
     {
-        lives--; // Deduct one life
-        Debug.Log("Lives remaining: " + lives);
+        lives--;
         if (lives <= 0)
         {
-            // Game over logic
-            Debug.Log("Game Over!");
+            lives = 0;
+            GameOver();
         }
         else
         {
             LoadLevel(stage);
         }
+        // UpdateHeartDisplay();
     }
 
     private void GameOver()
     {
         NewGame();
-        // SceneManager.LoadScene("GameOver")
     }
 
     public void CollectCoin()
@@ -87,4 +91,16 @@ public class GameManager : MonoBehaviour
              Debug.Log("All coins collected!");
         }
     }
+
+    public void LoseLife()
+    {
+        lives--;
+        if (lives <= 0)
+        {
+            lives = 0;
+            GameOver();
+        }
+        // UpdateHeartDisplay();
+    }
+    
 }

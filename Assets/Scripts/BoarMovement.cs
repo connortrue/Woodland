@@ -55,11 +55,10 @@ public class BoarMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-       if (collision.gameObject.CompareTag("Player")) // Check collision with player
+       if (collision.gameObject.CompareTag("Player"))
         {
-            // No action required here for collisions with player
+            // ...
         }
-        Debug.Log("Collision detected with: " + collision.gameObject.name);
     }
 
     private void Flip()

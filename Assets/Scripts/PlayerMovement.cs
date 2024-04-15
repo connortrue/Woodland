@@ -30,19 +30,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("BoarBottom")) // Check collision with Boar's bottom hit box
+        if (collision.gameObject.CompareTag("BoarBottom"))
         {
-            lives--; // Deduct one life
+            lives--;
             Debug.Log("Lives remaining: " + lives);
             if (lives <= 0)
             {
-                GameManager.Instance.ResetLevel(); // Reset the level if lives are zero or less
+                GameManager.Instance.ResetLevel();
                 Debug.Log("Game Over!");
             }
         }
-        else if (collision.gameObject.CompareTag("BoarTop")) // Check collision with Boar's top hit box
+        else if (collision.gameObject.CompareTag("BoarTop"))
         {
-            Destroy(collision.gameObject.transform.parent.gameObject); // Destroy the Boar GameObject
+            Destroy(collision.gameObject.transform.parent.gameObject);
         }
     }
 
