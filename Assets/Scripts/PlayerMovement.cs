@@ -43,14 +43,18 @@ public class PlayerMovement : MonoBehaviour
         inputAxis = Input.GetAxis("Horizontal");
         if (Mathf.Abs(inputAxis) > 0.1f)
         {
-            // Move in the input direction
             velocity.x = inputAxis * moveSpeed;
         }
         else
         {
-            // If no input is received, stop moving horizontally
             velocity.x = 0f;
         }
+        if (velocity.x > 0f) {
+            transform.eulerAngles = Vector3.zero;
+        }   else if (velocity.x < 0f) {
+            transform.eulerAngles = new Vector3(0f, 180f, 0f);
+        }
+
     }
     
     private void GroundedMovement()
@@ -70,7 +74,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!grounded)
         {
-        // Apply gravity to the velocity's y-component
             velocity.y -= gravity * Time.deltaTime;
         }
     }

@@ -9,7 +9,7 @@ public static class Extensions
             return false;
         }
 
-        float radius = 0.25f;
+        float radius = 0.30f;
         float distance = 1.5f;
 
         // Debug.DrawRay(rigidbody.position, direction * distance, Color.green); // Draw the raycast for visualization
