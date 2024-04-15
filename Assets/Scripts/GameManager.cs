@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public int stage { get; private set; }
+    public string stage { get; private set; }
     public int lives { get; private set; }
     private void Awake()
     {
@@ -31,19 +31,19 @@ public class GameManager : MonoBehaviour
     {
         lives = 3;
 
-        LoadLevel();
+        LoadLevel("Woodland-1");
     }
 
-    private void LoadLevel(int stage)
+    private void LoadLevel(string stage)
     {
         this.stage = stage;
 
-        SceneManager.LoadScene($"{stage}");
+        SceneManager.LoadScene("Woodland-1");
     }
 
     public void NextLevel()
     {
-        // ... LoadLevel(stage + 1);
+        // ... LoadLevel(stage + 1)
     }
 
     public void ResetLevel(float delay)
