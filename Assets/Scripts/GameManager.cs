@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
         coinsCollected++;
         if (coinsCollected >= totalCoinsInLevel)
         {
-            // Debug.Log("All coins collected!");
+             Debug.Log("All coins collected!");
         }
     }
 }
