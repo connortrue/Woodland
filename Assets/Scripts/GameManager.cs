@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -38,7 +39,13 @@ public class GameManager : MonoBehaviour
     {
         lives = 3;
         coinsCollected = 0;
-        LoadLevel("StartScene");
+        StartCoroutine(StartSceneRoutine());
+    }
+
+    private IEnumerator StartSceneRoutine()
+    {
+        yield return new WaitForSeconds(5f); // Wait for 5 seconds
+        LoadLevel("Woodland-1");
     }
 
     private void LoadLevel(string sceneName)
