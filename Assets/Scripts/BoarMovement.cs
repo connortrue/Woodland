@@ -65,11 +65,11 @@ public class BoarMovement : MonoBehaviour
 
     if (rb.velocity.x < 0)
     {
-        spriteRenderer.flipX = true;
+        spriteRenderer.flipX = false;
     }
     else if (rb.velocity.x > 0)
     {
-        spriteRenderer.flipX = false;
+        spriteRenderer.flipX = true;
     }
 }
 
