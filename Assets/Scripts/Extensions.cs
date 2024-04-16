@@ -10,7 +10,7 @@ public static class Extensions
         }
 
         float radius = 0.3f;
-        float distance = 1.7f;
+        float distance = 1.2f;
 
         // Debug.DrawRay(rigidbody.position, direction * distance, Color.green); // Draw the raycast for visualization
         // Debug.Log("Raycast Origin: " + rigidbody.position);
