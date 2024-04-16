@@ -36,13 +36,21 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Lives remaining: " + lives);
             if (lives <= 0)
             {
-                GameManager.Instance.ResetLevel();
+                GameManager.Instance.ReturnToMainMenu();
                 Debug.Log("Game Over!");
             }
         }
         else if (collision.gameObject.CompareTag("BoarTop"))
         {
             Destroy(collision.gameObject.transform.parent.gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Exit"))
+        {
+            GameManager.Instance.ReturnToMainMenu();
         }
     }
 

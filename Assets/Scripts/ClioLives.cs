@@ -43,7 +43,7 @@ public class ClioLives : MonoBehaviour
 
             if (lives <= 0)
             {
-                GameManager.Instance.ResetLevel();
+                GameManager.Instance.ReturnToMainMenu();
             }
         }
     }

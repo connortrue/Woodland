@@ -51,14 +51,9 @@ public class GameManager : MonoBehaviour
         // ... LoadLevel(stage + 1)
     }
 
-    public void ResetLevel(float delay)
+    public void ReturnToMainMenu()
     {
-        Invoke(nameof(ResetLevel), delay);
-    }
-
-    public void ResetLevel()
-    {
-        LoadLevel(stage);
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void CollectCoin()
@@ -66,7 +61,7 @@ public class GameManager : MonoBehaviour
         coinsCollected++;
         if (coinsCollected >= totalCoinsInLevel)
         {
-             Debug.Log("All coins collected!");
+            Debug.Log("All coins collected!");
         }
     }
 }

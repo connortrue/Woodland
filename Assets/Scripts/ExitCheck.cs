@@ -4,14 +4,14 @@ public class ExitCheck : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player")) 
         {
             Debug.Log("Player collided with exit");
 
             if (GameManager.Instance.coinsCollected >= GameManager.Instance.totalCoinsInLevel)
             {
-                Debug.Log("All coins collected. Resetting the level...");
-                GameManager.Instance.ResetLevel();
+                Debug.Log("All coins collected. Returning to the main menu...");
+                GameManager.Instance.ReturnToMainMenu();
             }
             else
             {
