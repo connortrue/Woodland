@@ -29,7 +29,7 @@ Woodland is a 2D platformer made in Unity. The goal is to make it to the end of 
 
 ## Getting Started
 
-You can download the completed game from this link:
+You can download the completed game from this link: https://github.com/Collinb190/Woodland
     - Save Woodland.zip to you desired location
     - Unzip Woodland.zip
     - Double click Woodland.exe and have fun!
