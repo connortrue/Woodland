@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name != "Woodland-1")
         {
             Debug.Log("Starting scene routine...");
-            yield return new WaitForSeconds(5f); // Wait for 5 seconds
+            yield return new WaitForSeconds(5f);
             Debug.Log("Loading Woodland-1...");
             LoadLevel("Woodland-1");
         }
@@ -58,12 +58,23 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    private void Update()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        if (currentSceneName == "DeathScene" || currentSceneName == "RealityScene" || currentSceneName == "BrokeScene")
+        {
+            if (Input.anyKeyDown)
+            {
+                ReturnToMainMenu();
+            }
+        }
+    }
+
     public void PlayerDies()
     {
         Debug.Log("Player died! Loading DeathScene...");
         LoadLevel("DeathScene");
     }
-
 
     public void PlayerPassesExitCheck()
     {
