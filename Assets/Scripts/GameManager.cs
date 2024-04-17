@@ -44,8 +44,11 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator StartSceneRoutine()
     {
-        yield return new WaitForSeconds(5f); // Wait for 5 seconds
-        LoadLevel("Woodland-1");
+        if (SceneManager.GetActiveScene().name != "Woodland-1")
+        {
+            yield return new WaitForSeconds(5f); // Wait for 5 seconds
+            LoadLevel("Woodland-1");
+        }
     }
 
     private void LoadLevel(string sceneName)
@@ -59,10 +62,6 @@ public class GameManager : MonoBehaviour
         if (lives <= 0)
         {
             LoadLevel("DeathScene");
-        }
-        else
-        {
-            LoadLevel("BrokeScene");
         }
     }
 
