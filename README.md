@@ -6,7 +6,7 @@ You are Clio. I ideal natural life is all you've ever known, but now you know yo
 
 1. [Features](#features)
 2. [Getting Started](#getting-started)
-3. [How to Play](#how-to-play)
+3. [Controls](#controls)
 4. [Authors](#authors)
 5. [License](#license)
 
