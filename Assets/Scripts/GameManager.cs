@@ -58,12 +58,25 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    private void Update()
+    {
+        // Check if the game is on DeathScene, RealityScene, or BrokeScene
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        if (currentSceneName == "DeathScene" || currentSceneName == "RealityScene" || currentSceneName == "BrokeScene")
+        {
+            // Check for any input from the player
+            if (Input.anyKeyDown)
+            {
+                ReturnToMainMenu();
+            }
+        }
+    }
+
     public void PlayerDies()
     {
         Debug.Log("Player died! Loading DeathScene...");
         LoadLevel("DeathScene");
     }
-
 
     public void PlayerPassesExitCheck()
     {
