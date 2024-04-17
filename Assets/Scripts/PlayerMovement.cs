@@ -27,23 +27,14 @@ public class PlayerMovement : MonoBehaviour
         camera = Camera.main;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+  private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("BoarBottom"))
         {
-            lives--;
-            Debug.Log("Lives remaining: " + lives);
-            if (lives <= 0)
-            {
-                GameManager.Instance.PlayerDies();
-                Debug.Log("Game Over!");
-            }
-        }
-        else if (collision.gameObject.CompareTag("BoarTop"))
-        {
-            Destroy(collision.gameObject.transform.parent.gameObject);
+            GetComponent<ClioLives>().RemoveLife();
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -129,8 +120,9 @@ public class PlayerMovement : MonoBehaviour
         Vector3 viewportPoint = camera.WorldToViewportPoint(transform.position);
         if (viewportPoint.y < 0f || viewportPoint.y > 1f || viewportPoint.x < 0f || viewportPoint.x > 1f)
         {
-            lives = 0;
+            Debug.Log("Player out of bounds!");
             GameManager.Instance.PlayerDies();
         }
     }
+
 }
