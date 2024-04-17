@@ -53,20 +53,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     private void Update()
     {
         HorizontalMovement();
-     
+
         grounded = rigidbody.Raycast(Vector2.down);
 
-        if (grounded) {
+        if (grounded)
+        {
             GroundedMovement();
         }
-        
-        ApplyGravity();
-        // Debug.Log("Grounded: " + grounded);
+        else
+        {
+            CheckIfOutOfBounds();
+        }
 
+        ApplyGravity();
     }
 
     private void HorizontalMovement()
@@ -80,19 +82,20 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.x = 0f;
         }
-        if (velocity.x > 0f) {
+        if (velocity.x > 0f)
+        {
             transform.eulerAngles = Vector3.zero;
-        }   else if (velocity.x < 0f) {
+        }
+        else if (velocity.x < 0f)
+        {
             transform.eulerAngles = new Vector3(0f, 180f, 0f);
         }
-
     }
-    
+
     private void GroundedMovement()
     {
         velocity.y = Mathf.Max(velocity.y, 0f);
         jumping = velocity.y > 0f;
-
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -119,5 +122,15 @@ public class PlayerMovement : MonoBehaviour
         position.x = Mathf.Clamp(position.x, leftEdge.x + 1f, rightEdge.x - 1f);
 
         rigidbody.MovePosition(position);
+    }
+
+    private void CheckIfOutOfBounds()
+    {
+        Vector3 viewportPoint = camera.WorldToViewportPoint(transform.position);
+        if (viewportPoint.y < 0f || viewportPoint.y > 1f || viewportPoint.x < 0f || viewportPoint.x > 1f)
+        {
+            lives = 0;
+            GameManager.Instance.PlayerDies();
+        }
     }
 }
