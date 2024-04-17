@@ -4,13 +4,11 @@ You are Clio. I ideal natural life is all you've ever known, but now you know yo
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Getting Started](#getting-started)
-4. [How to Play](#how-to-play)
-5. [Contributing](#contributing)
-6. [Authors](#authors)
-7. [License](#license)
+1. [Features](#features)
+2. [Getting Started](#getting-started)
+3. [How to Play](#how-to-play)
+4. [Authors](#authors)
+5. [License](#license)
 
 ## Introduction
 
